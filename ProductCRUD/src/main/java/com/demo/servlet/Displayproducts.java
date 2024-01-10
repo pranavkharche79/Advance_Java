@@ -18,7 +18,7 @@ import com.demo.service.ProductServiceImpl;
 /**
  * Servlet implementation class Displayproducts
  */
-@WebServlet("/products")
+@WebServlet("/")
 public class Displayproducts extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
