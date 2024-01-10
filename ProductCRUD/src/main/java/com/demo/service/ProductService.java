@@ -10,4 +10,6 @@ public interface ProductService {
 
 	void insertproduct(Product p);
 
+	void deleteprodbyid(int pid);
+
 }

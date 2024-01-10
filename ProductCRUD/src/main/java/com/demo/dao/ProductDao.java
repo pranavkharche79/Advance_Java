@@ -10,4 +10,6 @@ public interface ProductDao {
 
 	void insertproduct(Product p);
 
+	void deleteprodbyid(int pid);
+
 }

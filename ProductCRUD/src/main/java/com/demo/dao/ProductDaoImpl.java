@@ -13,12 +13,13 @@ import com.demo.model.Product;
 public class ProductDaoImpl implements ProductDao 
 {
 	static Connection conn;
-	static PreparedStatement selpro,inspro;
+	static PreparedStatement selpro,inspro,delprod;
 	static {
 		try {
 			conn=DBUtil.getMyConnection();
 			selpro=conn.prepareStatement("select * from products");
 			inspro=conn.prepareStatement("insert into products(title,description,unitprice,categoryid,unitinstock) values(?,?,?,?,?)");
+			delprod=conn.prepareStatement("delete from products where productid=?");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -54,6 +55,18 @@ public class ProductDaoImpl implements ProductDao
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void deleteprodbyid(int pid) {
+		try {
+			delprod.setInt(1, pid);
+			inspro.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 }

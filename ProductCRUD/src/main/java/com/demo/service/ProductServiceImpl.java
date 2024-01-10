@@ -20,5 +20,10 @@ public class ProductServiceImpl implements ProductService
 	public void insertproduct(Product p) {
 		pdao.insertproduct(p);
 	}
+	@Override
+	public void deleteprodbyid(int pid) {
+		pdao.deleteprodbyid(pid);
+		
+	}
 
 }

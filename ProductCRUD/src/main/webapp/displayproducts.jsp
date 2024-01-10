@@ -36,8 +36,8 @@
 		<td data-title='Provider Name'>${emp.catid}</td>
 		<td data-title='Provider Name'>${emp.unitstock}</td>
 		<td class='select'>
-		<a href="deleteprod?eid=${emp.pid}" class='button'>delete</a><br>
-		<a href="editprod?eid=${emp.pid}" class='button'>edit</a>
+		<a href="deleteprod?pid=${emp.pid}" class='button'>delete</a><br>
+		<a href="editprod?pid=${emp.pid}" class='button'>edit</a>
 		</td>
 		</tr>
 	  </c:forEach>
