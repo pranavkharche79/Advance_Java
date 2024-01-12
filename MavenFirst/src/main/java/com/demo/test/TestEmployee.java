@@ -20,7 +20,7 @@ public class TestEmployee {
 		//it is in transient state
 				SessionFactory sf=new Configuration().configure().buildSessionFactory();
 				Session s1=sf.openSession();
-				Transaction tr=s1.beginTransaction();		
+				Transaction tr=s1.beginTransaction();	
 				
 				Scanner sc=new Scanner(System.in);
 				int a=0;

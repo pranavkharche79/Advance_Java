@@ -25,5 +25,13 @@ public class ProductServiceImpl implements ProductService
 		pdao.deleteprodbyid(pid);
 		
 	}
+	@Override
+	public Product getprodbyid(int id) {
+		return pdao.getproductbyid(id);
+	}
+	@Override
+	public void updateproduct(Product p) {
+		pdao.updateproduct(p);
+	}
 
 }

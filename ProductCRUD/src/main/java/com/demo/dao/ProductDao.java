@@ -12,4 +12,8 @@ public interface ProductDao {
 
 	void deleteprodbyid(int pid);
 
+	Product getproductbyid(int id);
+
+	void updateproduct(Product p);
+
 }
