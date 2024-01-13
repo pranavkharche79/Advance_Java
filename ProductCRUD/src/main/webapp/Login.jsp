@@ -45,7 +45,6 @@
 	 	
 	 	 
       <h1><p id="p1" style="color: red;">${s}</p></h1> 
-      
 
     </div> 
 

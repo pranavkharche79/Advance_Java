@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.catalina.User;
 
+import com.demo.model.MyUser;
 import com.demo.model.Product;
 import com.demo.service.ProductService;
 import com.demo.service.ProductServiceImpl;
@@ -28,6 +29,10 @@ public class Displayproducts extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ProductService eservice=new ProductServiceImpl();
+//		HttpSession ses=(HttpSession)request.getAttribute("session");
+//		MyUser user=(MyUser)ses.getAttribute("user");
+//		System.out.println(user.getRole());
+		
 		List<Product> lst=eservice.getallproducts();
 		request.setAttribute("lst", lst);
 		RequestDispatcher rd= request.getRequestDispatcher("displayproducts.jsp");

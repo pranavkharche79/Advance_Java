@@ -38,6 +38,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("user", user);
 			if(user.getRole().equals("admin"))
 			{
+				request.setAttribute("session", session);
 				RequestDispatcher rd= request.getRequestDispatcher("products");
 				rd.forward(request, response);
 			}
@@ -45,6 +46,7 @@ public class LoginServlet extends HttpServlet {
 			{
 				String a="You are a User";
 				request.setAttribute("s", a);
+				request.setAttribute("session", session);
 				RequestDispatcher rd=request.getRequestDispatcher("Login.jsp");
 				rd.include(request, response);
 			}
