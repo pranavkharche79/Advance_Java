@@ -49,10 +49,10 @@ public class ProductServiceImpl implements ProductService{
 		return pdao.getById(pid);
 	}
 
-	@Override
-	public List<Product> getByQty(int qty) {
-		return pdao.getbyqty(qty);
-	}
+//	@Override
+//	public List<Product> getByQty(int qty) {
+//		return pdao.getbyqty(qty);
+//	}
 	
 	
 }

@@ -18,7 +18,7 @@ public class TestJDBC {
 		int choice=0;
 		do {
 			System.out.println("1. add new product\n 2. delete product\n 3. modify product");
-			System.out.println("4. display all\n5.display by id\n6. display by qty\n7.exit");
+			System.out.println("4. display all\n5.display by id\n6.exit");
 			System.out.println("choice: ");
 			choice=sc.nextInt();
 			switch(choice) {
@@ -67,13 +67,13 @@ public class TestJDBC {
 					System.out.println("not found");
 				}
 				break;
-			case 6:
-				System.out.println("enetr qty");
-				qty=sc.nextInt();
-				plist=pservice.getByQty(qty);
-				plist.forEach(System.out::println);
-				break;
 			case 7:
+//				System.out.println("enetr qty");
+//				qty=sc.nextInt();
+//				plist=pservice.getByQty(qty);
+//				plist.forEach(System.out::println);
+				break;
+			case 6:
 				System.out.println("Thank you for visiting.....");
 				break;
 			default:

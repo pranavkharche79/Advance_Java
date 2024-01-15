@@ -45,7 +45,7 @@ public class ProductDaoImpl implements ProductDao {
 
 	@Override
 	public Product getById(int pid) {
-		List<Product> plist = jt.query("select * from product where pid=?", new Object[] {pid},
+		Product plist = jt.queryForObject("select * from product where pid=?", new Object[] {pid},
 				(rs,num)->{
 					Product p =new Product();
 					p.setPid(rs.getInt(1));
@@ -54,22 +54,23 @@ public class ProductDaoImpl implements ProductDao {
 					p.setPrice(rs.getDouble(4));
 					return p;
 				});
-		return plist.get(0);
+		return plist;
+		
 	}
 
-	@Override
-	public List<Product> getbyqty(int qty) {
-		List<Product> plist = jt.query("select * from product where pid=?", new Object[] {pid},
-				(rs,num)->{
-					Product p =new Product();
-					p.setPid(rs.getInt(1));
-					p.setPname(rs.getString(2));
-					p.setQty(rs.getInt(3));
-					p.setPrice(rs.getDouble(4));
-					return p;
-				});
-		return plist.get(0);
-	}
+//	@Override
+//	public List<Product> getbyqty(int qty) {
+//		List<Product> lis = jt.query("select * from product where pid=?", new Object[] {qty},
+//				(rs,num)->{
+//					Product p =new Product();
+//					p.setPid(rs.getInt(1));
+//					p.setPname(rs.getString(2));
+//					p.setQty(rs.getInt(3));
+//					p.setPrice(rs.getDouble(4));
+//					return p;
+//				});
+//		return lis;
+//	}
 	
 	
 
