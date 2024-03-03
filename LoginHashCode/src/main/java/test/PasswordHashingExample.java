@@ -20,7 +20,7 @@ public class PasswordHashingExample {
     public static void main(String[] args) {
         // Example usage
         String passwordToHash = "Pranav";
-        
+          
         // Hash the password
         String hashedPassword = hashPassword(passwordToHash);
         System.out.println("Hashed Password: " + hashedPassword);

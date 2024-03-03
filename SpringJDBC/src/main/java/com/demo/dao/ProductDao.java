@@ -16,6 +16,6 @@ public interface ProductDao {
 
 	Product getById(int pid);
 
-	List<Product> getbyqty(int qty);
+//	List<Product> getbyqty(int qty);
 
 }

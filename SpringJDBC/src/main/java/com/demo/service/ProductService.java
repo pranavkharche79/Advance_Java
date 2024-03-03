@@ -16,6 +16,6 @@ public interface ProductService {
 
 	Product getById(int pid);
 
-	List<Product> getByQty(int qty);
+//	List<Product> getByQty(int qty);
 
 }
